@@ -363,6 +363,22 @@ fig.delaxes(ax[1, 1])
 plt.savefig('clusters.png')
 plt.show()
 
+## count of records in each cluster
+
+spectral_df['cluster'].value_counts()
+
+## records in cluster 0
+
+spectral_df[spectral_df['cluster'] == 0]
+
+## records in cluster 1
+
+spectral_df[spectral_df['cluster'] == 1]
+
+## records in cluster 2
+
+spectral_df[spectral_df['cluster'] == 2]
+
 ## silhouette score
 
 kmeans_silhouette = silhouette_score(kmeans_scaled, kmeans.labels_)
